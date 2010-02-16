@@ -1,0 +1,13 @@
+base: &base
+  adapter: mysql
+  username: <%= db_user %>
+  password: <%= db_pass %>
+
+production:
+  database: <%= application %>_production
+  <<: *base
+
+test:
+  database: <%= application %>_test
+  <<: *base
+EOF

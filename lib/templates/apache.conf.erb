@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+    ServerName <%= server_name %>
+    DocumentRoot <%= current_path %>/public
+
+    CustomLog     <%= shared_path %>/log/access.log combined
+    ErrorLog      <%= shared_path %>/log/error.log
+</VirtualHost>
